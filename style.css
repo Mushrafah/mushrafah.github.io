@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+}
+
+.column {
+  width: 30%;
+  max-width: 30%;
+  height: auto;
+  border: solid 1px #333;
+  flex-basis: 30%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+  border: 2px solid black;
+  position: relative;
+}
+
+.row > div {
+  background-color: rgb(211, 148, 53);
+  padding: 40px 20px 20px 20px;
+}
+
+.tag {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgb(158, 76, 18);
+  border-bottom: 2px solid rgb(241, 204, 135);
+  border-left: 2px solid rgb(241, 204, 135);
+  width: 100px;
+  height: 26px;
+  padding: 10px 40px 25px 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .column.one {
+    flex-basis: 50%;
+    max-width: 45%;
+    height: auto;
+    justify-content: center;
+  }
+  .column.two {
+    margin-left: 0;
+    margin-right: 0;
+    flex-basis: 50%;
+    max-width: 45%;
+    height: auto;
+    justify-content: center;
+  }
+  .column.three {
+    flex-basis: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .column.one,
+  .column.two,
+  .column.three {
+    margin: 10px;
+    flex-basis: 100%;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+}
